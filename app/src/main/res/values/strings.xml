@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FishHelp</string>
+    <string name="tab_text_1">Воблеры</string>
+    <string name="tab_text_2">Блесны</string>
+    <string name="tab_text_3">Колебалки</string>
+    <string name="tab_text_4">Резина</string>
+
+    <string name="fast_search">Быстрый поиск</string>
+    <string name="add_item">Добавить приманку</string>
+</resources>
