@@ -44,7 +44,7 @@ public class PlaceholderFragment extends Fragment {
 
     @Override
     public View onCreateView( @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.first_main_fragment, container, false);
+        View root = inflater.inflate(R.layout.main_fragment_1, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
         pageViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override

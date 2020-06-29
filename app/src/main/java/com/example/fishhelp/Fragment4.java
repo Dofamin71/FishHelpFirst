@@ -9,11 +9,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-public class ThirdFragment extends Fragment {
+public class Fragment4 extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.third_main_fragment, container, false);
+        View root = inflater.inflate(R.layout.main_fragment_4, container, false);
         final TextView textView = root.findViewById(R.id.section_label);
         return root;
     }

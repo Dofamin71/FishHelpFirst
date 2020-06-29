@@ -2,26 +2,22 @@ package com.example.fishhelp;
 
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
-import androidx.core.view.ViewCompat;
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.OvershootInterpolator;
-import android.widget.FrameLayout;
+import android.view.MenuItem;
 
 import com.example.fishhelp.ui.main.SectionsPagerAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class ActivityMain extends AppCompatActivity {
 
-    public boolean flag = true;
+    //public boolean flag = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +28,31 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
-        NavController navController = new NavController(this);
 
-        final FloatingActionButton fab = findViewById(R.id.fab);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.action_search:
+
+                                break;
+
+                            case R.id.action_main:
+
+                                break;
+
+                            case R.id.action_add:
+
+                                break;
+                        }
+                        return false;
+                    }
+                });
+
+        /*final FloatingActionButton fab = findViewById(R.id.fab);
         final FloatingActionButton add = findViewById(R.id.add);
         final FloatingActionButton search = findViewById(R.id.search);
 
@@ -47,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
                 if (flag) {
                     FrameLayout.LayoutParams layoutParams1 = (FrameLayout.LayoutParams) add.getLayoutParams();
                     layoutParams1.bottomMargin += (int) (add.getHeight() * 1.3);
@@ -97,5 +115,17 @@ public class MainActivity extends AppCompatActivity {
 
         add.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.goto_addFragment));
         search.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.goto_searchFragment));
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_animals"
+        app:backgroundTint="@color/colorPrimary"/>
+
+    <include layout="@layout/fab_layout" />*/
     }
 }

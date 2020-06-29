@@ -5,6 +5,7 @@
     <string name="tab_text_3">Колебалки</string>
     <string name="tab_text_4">Резина</string>
 
-    <string name="fast_search">Быстрый поиск</string>
-    <string name="add_item">Добавить приманку</string>
+    <string name="action_search">Поиск</string>
+    <string name="action_main">Главная</string>
+    <string name="action_add">Добавить</string>
 </resources>
